@@ -3,29 +3,19 @@
  */
 
 // app/index.js
-const calc = require('./calc')
+const calc = require('./calc');
 
 const numbersToAdd = [
     3,
     4,
     10,
     2
-]
+];
 
-const result = calc.sum(numbersToAdd)
-console.log(`The result is: ${result}`)
+const result = calc.sum(numbersToAdd);
+console.log(`The result is: ${result}`);
 
+const _ = require('lodash');
 
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.question('What do you think of Node.js? ', (answer) => {
-    // TODO: Log the answer in a database
-    console.log(`Thank you for your valuable feedback: ${answer}`);
-
-    rl.close();
-});
+_.assign({ 'a': 1 }, { 'b': 2 }, { 'c': 3 });
+// → { 'a': 1, 'b': 2, 'c': 3 }
